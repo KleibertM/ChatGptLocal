@@ -1,4 +1,4 @@
-import { CreateWebWorkerMLCEngine } from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.46/+esm"
+import { CreateWebWorkerMLCEngine } from "https://esm.run/@mlc-ai/web-llm"
 
 const $ = el => document.querySelector(el)
 
@@ -16,7 +16,7 @@ const $loading = $('.loading')
 let messages = []
 let end = false
 
-const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
+const SELECTED_MODEL = 'Phi-3-mini-4k-instruct-q4f16_1-MLC'
 
 const engine = await CreateWebWorkerMLCEngine(
     new Worker('./worker.js', { type: 'module' }),
@@ -28,7 +28,7 @@ const engine = await CreateWebWorkerMLCEngine(
                 end = true
                 $loading?.parentNode.removeChild($loading)
                 $button.removeAttribute('disabled')
-                addMessage('Hola! Sou un ChatGPT que se ejecuta en el navegador')
+                addMessage('Hola! Soy un ChatGPT que se ejecuta en el navegador')
                 $input.focus()
             }
         }
