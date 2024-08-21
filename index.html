@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Local</title>
+    <meta name="description" content="ConversAI es un asistente de inteligencia artificial que responde preguntas, ofrece sugerencias y te ayuda en tareas del día a día.">
+    <meta name="keywords" content="asistente virtual, inteligencia artificial, chatbot, productividad, IA, aprendizaje">
+    <meta name="author" content="Kleibert Medina / MiduDev Thanks">
+    <link rel="icon" href="./iconChat.webp" type="image/x-icon">
+
+    <title>ConversAI</title>
+
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" type="module" ></script>
+    <script src="index.js" type="module"></script>
 </head>
+
 <body>
     <main>
         <ul>
-            <li class="message bot">
-                <span>GPT</span>
-                <p>Esta es la respuesta del bot</p>
-            </li>
-
-            <li class="message user">
-                <span>Tú</span>
-                <p>Esta es la respuesta del usuario</p>
-            </li>
-
-            <li class="message user">
-                <span>Tú</span>
-                <p>Esta es la respuesta larga para ver que no se rompa nada</p>
+            <li class="loading">
+                <i></i>
+                <h4>Cargando...</h4>
+                <h5>Esto puede tardar un poco. Paciencia.</h5>
             </li>
         </ul>
     </main>
 
-    <form >
+    <form>
         <input placeholder="Esacribe tu mensaje aqui..">
-        <button>Enviar</button>
+        <button disabled>Enviar</button>
     </form>
-
+    <small>&nbsp;</small>
     <template id="message-template">
         <li class="message">
             <span></span>
-            <span></span>
+            <p></p>
         </li>
     </template>
-    
+
 </body>
+
 </html>
